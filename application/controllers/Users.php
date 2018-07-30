@@ -11,9 +11,9 @@
 			$this->form_validation->set_rules('password2', 'Confirm Password', 'matches[password]');
 
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('templates/header');
-				$this->load->view('users/register', $data);
-				$this->load->view('templates/footer');
+				$this->load->view('/templates/header');
+				$this->load->view('/users/register', $data);
+				$this->load->view('/templates/footer');
 			} else {
 				// Encrypt password
 				$enc_password = md5($this->input->post('password'));
@@ -23,7 +23,7 @@
 				// Set message
 				$this->session->set_flashdata('user_registered', 'You are now registered and can log in');
 
-				redirect('posts');
+				redirect('/posts');
 			}
 		}
 
@@ -35,9 +35,9 @@
 			$this->form_validation->set_rules('password', 'Password', 'required');
 
 			if($this->form_validation->run() === FALSE){
-				$this->load->view('templates/header');
-				$this->load->view('users/login', $data);
-				$this->load->view('templates/footer');
+				$this->load->view('/templates/header');
+				$this->load->view('/users/login', $data);
+				$this->load->view('/templates/footer');
 			} else {
 				
 				// Get username
@@ -62,12 +62,12 @@
 					// Set message
 					$this->session->set_flashdata('user_loggedin', 'You are now logged in');
 
-					redirect('posts');
+					redirect('/posts');
 				} else {
 					// Set message
 					$this->session->set_flashdata('login_failed', 'Login is invalid');
 
-					redirect('users/login');
+					redirect('/users/login');
 				}		
 			}
 		}
@@ -82,7 +82,7 @@
 			// Set message
 			$this->session->set_flashdata('user_loggedout', 'You are now logged out');
 
-			redirect('users/login');
+			redirect('/users/login');
 		}
 
 		// Check if username exists
