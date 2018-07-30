@@ -67,7 +67,7 @@
 					// Set message
 					$this->session->set_flashdata('login_failed', 'Login is invalid');
 
-					redirect('users/login');
+					redirect('/users/login');
 				}		
 			}
 		}
