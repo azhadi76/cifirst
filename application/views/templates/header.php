@@ -3,7 +3,7 @@
 		<title>ciBlog</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.2/flatly/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/css/style.css">
-    <script src="http://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
+    <script src="https://cdn.ckeditor.com/4.5.11/standard/ckeditor.js"></script>
 	</head>
 	<body>
 	<nav class="navbar navbar-inverse">
