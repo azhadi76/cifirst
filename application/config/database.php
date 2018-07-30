@@ -78,10 +78,10 @@ $url = parse_url(getenv("mysql://ba25998a1b38f7:806b5ac7@us-cdbr-iron-east-04.cl
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => $url["host"],
-	'username' => $url["user"],
-	'password' => $url["pass"],
-	'database' => substr($url["path"], 1),
+	'hostname' => 'us-cdbr-iron-east-04.cleardb.net',
+	'username' => 'ba25998a1b38f7',
+	'password' => '806b5ac7',
+	'database' => 'heroku_fa3c9ba1f752aa1',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
